@@ -1,0 +1,59 @@
+.localisation {
+    &__form {
+        &__recherche {
+          @include flexDir(initial, center);
+          background-color: darken(#ffffff, 7%);
+          padding: 20px 0;
+          box-shadow: inset 0 8px 6px -6px darken(#ffffff, 20%);
+
+            i {
+              font-size: 20px;
+              color: lighten(black, 30%);
+              margin-right: 20px;
+            }
+
+            &__info {
+              @include input-border-none($statue);
+              @include couleur(transparent, lighten(black, 30%));
+              @include font(19px, bold);
+              width: 170px;
+            }
+        }
+
+        &__present {
+          background-color: darken(#ffffff, 3%);
+          @include flexDir(column, center, center);
+          padding: 25px;
+
+            &__titre {
+              @include font(29px, bold);
+              text-align: center;
+              padding: 0 30px;
+            }
+
+            &__parag {
+              @include font(23px);
+              text-align: center;
+              color: lighten(black, 40%);
+              margin-top: 0;
+            }
+
+            &__envoyer {
+              border: none;
+              @include font(20px);
+              @include couleur(primaire, blanc);
+              padding: 20px 30px;
+              border-radius: 30px;
+              box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.30);
+              margin-top: 20px;
+              margin-bottom: 50px;
+
+                &:hover {
+                  cursor: pointer;
+                  background: lighten(map-get($couleurs, primaire), 3%);
+                  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.40);
+                }
+            }
+        }
+    }
+}

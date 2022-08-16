@@ -1,0 +1,49 @@
+@mixin couleur($background : initial, $text : initial) {
+  @if map-has-key($couleurs, $background) {
+
+    background-color: map-get($couleurs, $background);
+
+  } @else {
+
+    background-color: $background;
+
+  }
+
+  @if map-has-key($couleurs, $text) {
+
+    color: map-get($couleurs, $text);
+
+  } @else {
+
+    color: $text;
+
+  }
+}
+
+@mixin font($size: initial, $weigh: initial) {
+  font-size: $size;
+  font-weight: $weigh;
+}
+
+@mixin flexDir($direction: initial, $justify-content: initial, $align-items: initial) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin mediaQueries($ecran) {
+  @media screen and (min-width: map-get($breakpoints, $ecran)) {
+    @content;
+  }
+}
+
+@mixin input-border-none($border-none) {
+  border: none;
+  @each $statue in $border-none {
+    &:#{$statue} {
+      border: none;
+      outline: none;
+    }
+  }
+}

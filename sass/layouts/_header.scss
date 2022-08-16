@@ -1,0 +1,11 @@
+.header {
+
+  &__logo {
+    @include flexDir(initial, center);
+    margin: 20px 0;
+
+    img {
+      width: 50%;
+    }
+  }
+}

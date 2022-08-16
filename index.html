@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+          integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <title>Ohmyfood</title>
+    <link rel="stylesheet" href="public/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="chargement">
+        <div>oh</div>
+        <div>my</div>
+        <div>food</div>
+    </div>
+
+    <main>
+
+        <header class="header">
+
+            <div class="header__logo">
+                <img src="public/images/logo/ohmyfood.png" alt="logo">
+            </div>
+
+        </header>
+
+
+        <div class="localisation">
+
+            <form method="get" class="localisation__form" name="localisation__form">
+
+                <div class="localisation__form__recherche">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input name="localisation" type="search" placeholder="Paris, Belleville" class="localisation__form__recherche__info">
+                </div>
+
+                <div class="localisation__form__present">
+                    <h1 class="localisation__form__present__titre">Réservez le menu qui vous convient</h1>
+                    <p class="localisation__form__present__parag">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+
+                    <input type="submit" value="Explorer nos restaurants" class="localisation__form__present__envoyer">
+
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+
+        <section class="fonctionnement">
+
+            <h1 class="fonctionnement__titre">Fonctionnement</h1>
+
+            <div class="fonctionnement__choix">
+
+                <i class="fa-solid fa-1 fonctionnement__choix__chiffre"></i>
+                <i class="fa-solid fa-mobile-screen-button fonctionnement__choix__icon"></i>
+                <p class="fonctionnement__choix__info">Choisissez un restaurant</p>
+
+            </div>
+
+            <div class="fonctionnement__choix">
+
+                <i class="fa-solid fa-2 fonctionnement__choix__chiffre"></i>
+                <i class="fa-solid fa-list-ul fonctionnement__choix__icon"></i>
+                <p class="fonctionnement__choix__info">Composez votre menu</p>
+
+            </div>
+
+            <div class="fonctionnement__choix">
+
+                <i class="fa-solid fa-3 fonctionnement__choix__chiffre"></i>
+                <i class="fa-solid fa-store fonctionnement__choix__icon"></i>
+                <p class="fonctionnement__choix__info">Dégustez au restaurant</p>
+
+            </div>
+
+        </section>
+
+
+        <section class="restaurant">
+
+            <h1 class="restaurant__titre">Restaurants</h1>
+
+            <a href="menu/la_palette_du_gout.html" class="restaurant__choix">
+
+                <div class="restaurant__choix__image">
+                    <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image_restaurant">
+                    <p class="restaurant__choix__image__etiquette">Nouveau</p>
+                </div>
+
+                <div>
+                    <p class="restaurant__choix__nom">La palette du goût</p>
+                    <p class="restaurant__choix__quartier">Ménilmontant</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-heart restaurant__choix__icon" onclick="return false;"></i>
+                </div>
+
+            </a>
+
+            <a href="menu/la_note_enchantee.html" class="restaurant__choix">
+
+                <div class="restaurant__choix__image">
+                    <img src="public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="image_restaurant">
+                    <p class="restaurant__choix__image__etiquette">Nouveau</p>
+                </div>
+
+                <div>
+                    <p class="restaurant__choix__nom">La note enchantée</p>
+                    <p class="restaurant__choix__quartier">Charonne</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-heart restaurant__choix__icon" onclick="return false;"></i>
+                </div>
+
+            </a>
+
+            <a href="menu/a_la_francaise.html" class="restaurant__choix">
+
+                <div class="restaurant__choix__image">
+                    <img src="public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image_restaurant">
+                </div>
+
+                <div>
+                    <p class="restaurant__choix__nom">À la française</p>
+                    <p class="restaurant__choix__quartier">Cité Rouge</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-heart restaurant__choix__icon" onclick="return false;"></i>
+                </div>
+
+            </a>
+
+            <a href="menu/le_delice_des_sens.html" class="restaurant__choix">
+
+                <div class="restaurant__choix__image">
+                    <img src="public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="image_restaurant">
+                </div>
+
+                <div>
+                    <p class="restaurant__choix__nom">Le délice des sens</p>
+                    <p class="restaurant__choix__quartier">Folie-Méricourt</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-heart restaurant__choix__icon" onclick="return false;"></i>
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <img src="public/images/logo/ohmyfood@2x.svg" alt="logo" class="footer__logo">
+            <a href="" class="footer__link"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a>
+            <a href="" class="footer__link"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a>
+            <a href="" class="footer__link">Mentions légales</a>
+            <a href="mailto:contact@ohmyfood.fr" class="footer__link">Contact</a>
+
+        </footer>
+
+    </main>
+
+    <!-- Optional -->
+    <script src="https://kit.fontawesome.com/643c9e7905.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
