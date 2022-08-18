@@ -1,0 +1,15 @@
+.header__retour {
+
+    i {
+      color: black;
+      font-size: 26px;
+      position: absolute;
+      left: 30px;
+      top: 25px;
+    }
+
+    i:hover {
+      transform: scale(1.05);
+      text-shadow: 2px 2px 4px lighten(black, 50%);
+    }
+}

@@ -1,16 +1,18 @@
 .footer {
-  background-color: lighten(black, 17%);
+  background-color: lighten(black, 20%);
   @include flexDir(column);
   padding: 30px 20px 30px 40px;
 
-  &__logo {
-      width: 120px;
+    &__titre {
+      font-family: "Shrikhand", sans-serif;
+      color: darken(white, 15%);
+      @include font(21px, 100);
       margin-bottom: 20px;
     }
 
     &__link {
       text-decoration: none;
-      color: darken(white, 25%);
+      color: darken(white, 15%);
       margin-bottom: 10px;
       font-size: 18px;
 

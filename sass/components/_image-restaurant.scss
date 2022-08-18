@@ -1,0 +1,13 @@
+.image__restaurant {
+  z-index: -2;
+  @include flexDir(column);
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+
+    img {
+      z-index: -1;
+      object-fit: cover;
+      height: 100%;
+    }
+}

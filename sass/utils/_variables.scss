@@ -1,4 +1,4 @@
-$L100: 100%;
+// Variable Global
 
 $couleurs: (
         primaire: #9356DC,
@@ -10,8 +10,31 @@ $couleurs: (
 );
 
 $breakpoints: (
-        tablette: 991px,
-        mobile: 767px,
+        tablette: 900px,
+        mobile: 550px,
 );
 
 $statue: active, focus, hover;
+
+
+// Variable animation loader
+$couleurs-anim: (
+        1: #9356DC,
+        2: #FF79DA,
+        3: #99E2D0,
+);
+
+$nb-bloc: 3;
+
+$anim-dur: .8s;
+
+$anim-delay: $anim-dur / $nb-bloc;
+
+
+// Variable animation menu
+
+$nb-bloc-menu: 4;
+
+$anim-dur-menu: 1s;
+
+$anim-delay-menu: $anim-dur-menu / $nb-bloc-menu;

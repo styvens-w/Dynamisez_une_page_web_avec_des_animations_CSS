@@ -1,0 +1,146 @@
+.liste {
+  z-index: 1;
+  @include flexDir(column);
+  background-color: darken(#ffffff, 3%);
+  border-radius: 45px;
+  margin-top: -68px;
+  padding: 20px 20px;
+
+    &__nomRest {
+      @include flexDir(initial, space-between);
+      @include font(34px, 500);
+      font-family: "Shrikhand", sans-serif;
+
+        i {
+          font-size: 26px;
+          transition: all .3s linear 0s;
+          color: transparent;
+          -webkit-text-stroke: 1px #000;
+          transform: scaleY(1.2);
+          margin-top: 8px;
+          margin-right: 20px;
+
+          &:hover {
+            cursor: pointer;
+            transition: all .3s linear 0s;
+            @include couleur(initial, primaire);
+            -webkit-text-stroke: 1px map-get($couleurs, primaire);
+          }
+        }
+    }
+
+    &__section {
+      padding-bottom: 20px;
+
+        &__titre {
+          @include flexDir(column);
+          @include font(20px, 500);
+          color: lighten(black, 25%);
+          margin-bottom: 25px;
+          margin-left: 2px;
+
+            &::after {
+              position: absolute;
+              margin-left: 1px;
+              color: map-get($couleurs, tertiaire);
+              letter-spacing: -1px;
+              content: "____";
+              @include font(30px, bold);
+            }
+        }
+
+        &__choix {
+          animation: volet $anim-dur-menu forwards;
+          @include flexDir(initial, space-between, center);
+          @include volet-animation;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.15);
+          margin-top: 20px;
+          padding: 0 13px;
+          overflow: hidden;
+          height: 0;
+
+            div:nth-child(1) {
+              flex: 2;
+              white-space: nowrap;
+              overflow: hidden;
+            }
+
+            &__nom {
+              @include font(20px, bold);
+              margin-bottom: 5px;
+              margin-top: 16px;
+            }
+
+            &__info {
+              margin-top: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            &__prix p {
+              @include font(18px, bold);
+              color: lighten(black, 25%);
+              margin: 32px 15px 5px;
+            }
+
+            &__icon {
+              @include flexDir(column, center, center);
+              @include couleur(tertiaire, blanc);
+              transition: all .4s linear;
+              width: 70px;
+              height: 100%;
+              font-size: 24px;
+              margin-right: -83px;
+              margin-left: 10px;
+            }
+
+            &:hover {
+              cursor: pointer;
+              box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.30);
+
+                .liste__section__choix__icon {
+                  transition: all .4s linear;
+                  margin-right: -13px;
+
+                    i {
+                      transition: all .3s linear;
+                      transition-delay: .2s;
+                      transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__valider {
+      @include flexDir(initial, center);
+      margin: 70px 0;
+
+        button {
+          border: none;
+          @include couleur(primaire, blanc);
+          font-size: 20px;
+          padding: 20px 60px;
+          border-radius: 50px;
+          box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35);
+
+            &:hover {
+              cursor: pointer;
+              background: lighten(map-get($couleurs, primaire), 3%);
+              box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.55);
+            }
+        }
+    }
+}
+
+@keyframes volet {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 75px;
+  }
+}

@@ -1,3 +1,5 @@
+// Mixins global
+
 @mixin couleur($background : initial, $text : initial) {
   @if map-has-key($couleurs, $background) {
 
@@ -44,6 +46,33 @@
     &:#{$statue} {
       border: none;
       outline: none;
+    }
+  }
+}
+
+
+// Mixins loader accueil
+
+@mixin bloc-animation {
+
+  @for $i from 1 through $nb-bloc {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+      color: map-get($couleurs-anim, $i);
+      text-shadow: 3px 3px 4px map-get($couleurs-anim, $i);
+    }
+  }
+}
+
+
+// Mixins volet menu
+
+@mixin volet-animation {
+
+  @for $i from 1 through $nb-bloc-menu {
+    $child: $i + 1;
+    &:nth-child(#{$child}) {
+      animation-delay: $anim-delay-menu * $i;
     }
   }
 }
