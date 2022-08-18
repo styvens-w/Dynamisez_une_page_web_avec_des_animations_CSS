@@ -257,6 +257,7 @@ main:not(.liste) {
   position: absolute;
   animation: affichage 4s;
   animation-fill-mode: forwards;
+  width: 100%;
 }
 
 .chargement {
