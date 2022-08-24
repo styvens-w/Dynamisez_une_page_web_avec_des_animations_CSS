@@ -2,8 +2,21 @@
   background-color: darken(#ffffff, 3%);
   padding: 30px 20px 50px;
 
+  @include mediaQueries(tablette-mini) {
+    padding: 30px 40px 50px;
+  };
+
+  @include mediaQueries(tablette) {
+    padding: 30px 20px 50px;
+    @include flexDir(initial, space-between, center);
+    flex-wrap: wrap;
+  }
+
   &__titre {
-      @include font(28px, blod);
+      @include font(28px, bold);
+      @include mediaQueries(tablette) {
+        flex: 100%;
+      }
     }
 
     &__choix {
@@ -17,6 +30,10 @@
       margin-bottom: 20px;
       overflow: hidden;
       box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.15);
+
+      @include mediaQueries(tablette) {
+        width: 49%;
+      }
 
         &:hover {
           box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.30);
@@ -63,16 +80,27 @@
         &__icon {
           margin-right: 30px;
           font-size: 25px;
-          transition: all .3s linear 0s;
-          color: white;
+          @include couleur(blanc);
+          -webkit-background-clip:text;
+          color:transparent;
           -webkit-text-stroke: 1px #000;
           transform: scaleY(1.2);
 
             &:hover {
               transition: all .3s linear 0s;
-              @include couleur(initial, primaire);
-              -webkit-text-stroke: 1px map-get($couleurs, primaire);
+              animation: btn-aime 1s forwards;
             }
         }
     }
+}
+
+
+@keyframes btn-aime {
+
+  100% {
+    @include couleur(degrade-inverse);
+    -webkit-background-clip:text;
+    color:transparent;
+    -webkit-text-stroke: inherit;
+  }
 }

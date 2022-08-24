@@ -7,12 +7,14 @@ $couleurs: (
         noir: black,
         blanc: white,
         transparent: transparent,
-        degrade: linear-gradient(#9356DC, #FF79DA)
+        degrade: linear-gradient(#FF79DA, #9356DC),
+        degrade-inverse: linear-gradient(#9356DC, #FF79DA)
 );
 
 $breakpoints: (
-        tablette: 900px,
-        mobile: 550px,
+        tablette-mini: 600px,
+        tablette: 826px,
+        ordinateur-grand: 1225px
 );
 
 $statue: active, focus, hover;

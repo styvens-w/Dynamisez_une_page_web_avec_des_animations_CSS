@@ -1,8 +1,26 @@
 .fonctionnement {
   padding: 20px;
 
+  @include mediaQueries(tablette-mini) {
+    padding: 20px 40px;
+  };
+
+  @include mediaQueries(tablette) {
+    @include flexDir(initial, space-between, center);
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  @include mediaQueries(ordinateur) {
+
+  }
+
     &__titre {
       @include font(28px, bold);
+
+      @include mediaQueries(tablette) {
+        flex: 100%;
+      }
     }
 
     &__choix {
@@ -13,6 +31,11 @@
       border-radius: 25px;
       box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.15);
 
+      @include mediaQueries(tablette) {
+        width: 29%;
+        margin: 30px 15px 20px 15px;
+      }
+
         &__chiffre {
           @include couleur(primaire, blanc);
           padding: 8px 11px;
@@ -20,12 +43,20 @@
           font-size: 14px;
           margin-left: -15px;
           margin-right: 30px;
-          }
+
+          @include mediaQueries(tablette) {
+            margin-right: 15px;
+          };
+        }
 
         &__icon {
           @include couleur(initial, lighten(black, 50%));
           font-size: 25px;
           margin-right: 30px;
+
+          @include mediaQueries(tablette) {
+            margin-right: 15px;
+          };
         }
 
         &__info {

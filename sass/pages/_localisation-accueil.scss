@@ -50,7 +50,7 @@
 
                 &:hover {
                   cursor: pointer;
-                  background: lighten(map-get($couleurs, primaire), 3%);
+                  filter: brightness(1.1);
                   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.40);
                 }
             }
