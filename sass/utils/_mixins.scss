@@ -3,11 +3,11 @@
 @mixin couleur($background : initial, $text : initial) {
   @if map-has-key($couleurs, $background) {
 
-    background-color: map-get($couleurs, $background);
+    background: map-get($couleurs, $background);
 
   } @else {
 
-    background-color: $background;
+    background: $background;
 
   }
 

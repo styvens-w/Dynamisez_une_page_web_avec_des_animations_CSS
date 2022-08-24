@@ -389,7 +389,7 @@ main:not(.liste) {
   border: none;
   font-size: 20px;
   font-weight: initial;
-  background-color: #9356DC;
+  background-color: linear-gradient(#9356DC, #FF79DA);
   color: white;
   padding: 20px 30px;
   border-radius: 30px;
