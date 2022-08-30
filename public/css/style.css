@@ -109,11 +109,6 @@ body {
   font-weight: 500;
   font-family: "Shrikhand", sans-serif;
 }
-@media screen and (min-width: 826px) {
-  .liste__nomRest {
-    justify-content: initial;
-  }
-}
 .liste__nomRest i {
   font-size: 26px;
   margin-top: 8px;
@@ -132,8 +127,7 @@ body {
 }
 .liste__nomRest i:hover {
   cursor: pointer;
-  transition: all 0.3s linear 0s;
-  animation: btn-aime 1s forwards;
+  animation: btn-aime 0.5s forwards linear;
 }
 .liste__section {
   padding-bottom: 20px;
@@ -630,17 +624,20 @@ main:not(.liste) {
   transform: scaleY(1.2);
 }
 .restaurant__choix__icon:hover {
-  transition: all 0.3s linear 0s;
-  animation: btn-aime 1s forwards;
+  animation: btn-aime 0.5s forwards linear;
 }
 
 @keyframes btn-aime {
+  50% {
+    opacity: 0.5;
+  }
   100% {
     background: linear-gradient(#9356DC, #FF79DA);
     color: initial;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-stroke: inherit;
+    opacity: 1;
   }
 }
 

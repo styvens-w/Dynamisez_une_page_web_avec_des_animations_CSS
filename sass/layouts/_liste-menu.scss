@@ -11,10 +11,6 @@
       @include font(34px, 500);
       font-family: "Shrikhand", sans-serif;
 
-      @include mediaQueries(tablette) {
-        justify-content: initial;
-      }
-
         i {
           font-size: 26px;
           margin-top: 8px;
@@ -31,8 +27,7 @@
 
           &:hover {
             cursor: pointer;
-            transition: all .3s linear 0s;
-            animation: btn-aime 1s forwards;
+            animation: btn-aime .5s forwards linear;
           }
         }
     }

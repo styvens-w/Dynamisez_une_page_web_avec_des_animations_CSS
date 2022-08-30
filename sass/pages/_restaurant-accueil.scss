@@ -87,8 +87,7 @@
           transform: scaleY(1.2);
 
             &:hover {
-              transition: all .3s linear 0s;
-              animation: btn-aime 1s forwards;
+              animation: btn-aime .5s forwards linear;
             }
         }
     }
@@ -97,10 +96,15 @@
 
 @keyframes btn-aime {
 
+  50% {
+    opacity: 0.5;
+  }
+
   100% {
     @include couleur(degrade-inverse);
     -webkit-background-clip:text;
     color:transparent;
     -webkit-text-stroke: inherit;
+    opacity: 1;
   }
 }
